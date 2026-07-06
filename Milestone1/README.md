@@ -63,7 +63,7 @@ supports both a security-question flow and an email-based OTP flow sent via Gmai
 
 ## Screenshots
 
-> Add screenshots to a `screenshots/` folder inside `Milestone1` and reference them here:
+
 
 - Login
 - Signup
