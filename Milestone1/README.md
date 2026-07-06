@@ -62,13 +62,34 @@ supports both a security-question flow and an email-based OTP flow sent via Gmai
 6. Sign up as a user, or use the **Admin** tab to sign in as an administrator.
 
 ## Screenshots
+## Screenshots
 
+### Login Page
+![Login Page](screenshots/Login_Page.png)
 
+### Signup Page
+![Signup Page](screenshots/Signup_page.png)
 
-- Login
-- Signup
-- Forgot Password — Security Question route
-- Forgot Password — Email OTP route
-- OTP email received
-- User Dashboard
-- Admin Dashboard
+### Signup Validation Error
+![Signup Validation Error](screenshots/Signup_validation_error.png)
+
+### Forgot Password
+![Forgot Password](screenshots/Forgot_password.png)
+
+### Forgot Password - Security Question route
+![Forgot Password - Security Question](screenshots/Forgot_password-Security_Question_route.png)
+
+### Forgot Password - Email OTP route
+![Forgot Password - Email OTP](screenshots/Forgot_password-email_OTP_route.png)
+
+### OTP Email
+![OTP Email](screenshots/The_actual_OTP_email.png)
+
+### User Dashboard
+![User Dashboard](screenshots/User_Dashboard.png)
+
+### Administrator Login
+![Administrator Login](screenshots/Administrator_Login.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/Admin_Dashboard.png)
