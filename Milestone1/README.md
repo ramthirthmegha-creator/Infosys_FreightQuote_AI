@@ -9,6 +9,38 @@ system as a single-page Streamlit application, run inside Google Colab and expos
 publicly through an ngrok tunnel. Sessions are managed with JWT, and password recovery
 supports both a security-question flow and an email-based OTP flow sent via Gmail SMTP.
 
+## Architecture
+
+The whole app is one Python script (`app.py`), written to disk by a Colab cell and run
+as a background Streamlit process, tunnelled to the public internet by ngrok.
+
+```
+┌─────────────┐   writes    ┌──────────┐   runs as    ┌────────────┐   public URL   ┌────────┐
+│ Colab Cell  │ ──────────▶ │ app.py   │ ───────────▶ │ Streamlit  │ ─────────────▶ │ ngrok  │
+│ (%%writefile)│            │ (script) │              │  process   │                │ tunnel │
+└─────────────┘             └──────────┘              └────────────┘                └────────┘
+                                  │
+                    ┌─────────────┼──────────────┐
+                    ▼             ▼               ▼
+             ┌────────────┐ ┌───────────┐  ┌──────────────┐
+             │  SQLite DB │ │  PyJWT     │  │  Gmail SMTP  │
+             │ (users     │ │ (session   │  │ (OTP emails) │
+             │  table)    │ │  tokens)   │  │              │
+             └────────────┘ └───────────┘  └──────────────┘
+```
+
+- **Colab Secrets** feed `JWT_SECRET`, `EMAIL_ADDRESS`, `EMAIL_PASSWORD`, `NGROK_AUTHTOKEN`,
+  and `ADMIN_USERNAME`/`ADMIN_PASSWORD` into the environment at launch — nothing sensitive
+  is hardcoded in `app.py`.
+- **SQLite** (`infosys_portal.db`) stores registered users: username, email, a bcrypt
+  password hash, a security question, and a bcrypt-hashed security answer.
+- **PyJWT** issues a signed, time-limited token on login, stored in Streamlit's session
+  state — this token (not a server-side session) is what keeps a user "logged in."
+- **Gmail SMTP** sends the one-time password for the Forgot Password → Email OTP route;
+  the OTP itself is never stored in the database, only hashed inside a short-lived JWT.
+- **Admin access** is a separate, hardcoded credential check — completely independent of
+  the `users` table — so the admin is not a signup account.
+
 ## Features Built
 
 - **Login** — sign in with either username or email + password. A single generic error
@@ -39,7 +71,7 @@ supports both a security-question flow and an email-based OTP flow sent via Gmai
 
 | Layer | Technology |
 |---|---|
-| UI / Frontend | Streamlit (custom CSS — glassmorphism style) |
+| UI / Frontend | Streamlit (custom CSS — yellow/teal neo-brutalist style) |
 | Auth / Sessions | PyJWT (JSON Web Tokens) |
 | Password hashing | bcrypt |
 | Database | SQLite (local file, auto-created on first run) |
@@ -49,7 +81,7 @@ supports both a security-question flow and an email-based OTP flow sent via Gmai
 
 ## How to Run
 
-1. Open `Milestone1_Auth_Portal.ipynb` in Google Colab.
+1. Open `Login_Page.ipynb` in Google Colab.
 2. Click the **key icon** (Secrets) in the left sidebar and add:
    - `JWT_SECRET` — any long random string
    - `NGROK_AUTHTOKEN` — your ngrok Authtoken
@@ -61,7 +93,6 @@ supports both a security-question flow and an email-based OTP flow sent via Gmai
 5. Open the printed ngrok URL in your browser.
 6. Sign up as a user, or use the **Admin** tab to sign in as an administrator.
 
-## Screenshots
 ## Screenshots
 
 ### Login Page
