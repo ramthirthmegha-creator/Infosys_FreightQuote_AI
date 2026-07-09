@@ -128,9 +128,9 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
   <b>OTP Email Received</b><br>
   <img src="screenshots/Actual_OTP_email.png" width="500"><br><br>
   <b>User Dashboard</b><br>
-  <img src="screenshots/User_dashboard.png" width="500"><br><br>
+  <img src="screenshots/User_Dashboard.png" width="500"><br><br>
   <b>Administrator Login</b><br>
-  <img src="screenshots/Administrator_login.png" width="500"><br><br>
+  <img src="screenshots/Administrator_Login.png" width="500"><br><br>
   <b>Admin Dashboard</b><br>
-  <img src="screenshots/Admin_dashboard.png" width="500">
+  <img src="screenshots/Admin_Dashboard.png" width="500">
 </p>
