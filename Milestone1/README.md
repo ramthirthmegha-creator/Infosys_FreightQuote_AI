@@ -93,7 +93,64 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
 5. Open the printed ngrok URL in your browser.
 6. Sign up as a user, or use the **Admin** tab to sign in as an administrator.
 
+## Setting Up ngrok
+
+1. Create a free account at [ngrok.com](https://ngrok.com).
+2. On your ngrok dashboard, copy your personal **Authtoken**.
+3. In Colab, click the **key icon 🔑** (Secrets) in the left sidebar.
+4. Add a new secret named `NGROK_AUTHTOKEN`, paste the token as its value, and toggle notebook access **ON**.
+
+## Setting Up a Gmail App Password (for sending OTP emails)
+
+1. Open your Google Account settings for the Gmail address you want to send OTPs from.
+2. Turn on **2-Step Verification** — an App Password option won't appear until this is enabled.
+3. In the Google Account search bar, search for **"App Passwords"** and open it.
+4. Create a new app password and label it (e.g. "Infosys Portal").
+5. Click **Create** — Google shows a 16-character password once.
+6. Copy it immediately (it can't be viewed again after closing).
+7. In Colab Secrets, add `EMAIL_ADDRESS` (your Gmail address) and `EMAIL_PASSWORD` (the 16-character App Password, not your normal Gmail password).
+
 ## Screenshots
+
+<p align="center">
+  <b>Login</b><br>
+  <img src="screenshots/login.png" width="500"><br><br>
+  <b>Signup</b><br>
+  <img src="screenshots/signup.png" width="500"><br><br>
+  <b>Forgot Password — Security Question route</b><br>
+  <img src="screenshots/forgot_security_question.png" width="500"><br><br>
+  <b>Forgot Password — Email OTP route</b><br>
+  <img src="screenshots/forgot_otp.png" width="500"><br><br>
+  <b>OTP Email Received</b><br>
+  <img src="screenshots/otp_email.png" width="500"><br><br>
+  <b>User Dashboard</b><br>
+  <img src="screenshots/user_dashboard.png" width="500"><br><br>
+  <b>Administrator Login</b><br>
+  <img src="screenshots/admin_login.png" width="500"><br><br>
+  <b>Admin Dashboard</b><br>
+  <img src="screenshots/admin_dashboard.png" width="500">
+</p>
+
+> Rename your actual screenshot files to match the names above (or edit the paths here to match your filenames), and make sure they're all inside `Milestone1/screenshots/`.
+## Screenshots
+<p align="center">
+  <b>Login</b><br>
+  <img src="screenshots/login.png" width="500"><br><br>
+  <b>Signup</b><br>
+  <img src="screenshots/signup.png" width="500"><br><br>
+  <b>Forgot Password — Security Question route</b><br>
+  <img src="screenshots/forgot_security_question.png" width="500"><br><br>
+  <b>Forgot Password — Email OTP route</b><br>
+  <img src="screenshots/forgot_otp.png" width="500"><br><br>
+  <b>OTP Email Received</b><br>
+  <img src="screenshots/otp_email.png" width="500"><br><br>
+  <b>User Dashboard</b><br>
+  <img src="screenshots/user_dashboard.png" width="500"><br><br>
+  <b>Administrator Login</b><br>
+  <img src="screenshots/admin_login.png" width="500"><br><br>
+  <b>Admin Dashboard</b><br>
+  <img src="screenshots/admin_dashboard.png" width="500">
+</p>
 
 ### Login Page
 ![Login Page](screenshots/Login_Page.png)
