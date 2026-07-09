@@ -124,9 +124,9 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
   <b>Forgot Password — Security Question route</b><br>
   <img src="screenshots/Forgot_password-Security_Question_route.png" width="500"><br><br>
   <b>Forgot Password — Email OTP route</b><br>
-  <img src="screenshots/Forgot_password-email_OTP_route.png" width="500"><br><br>
+  <img src="screenshots/Forgot_password-Email_OTP_route.png" width="500"><br><br>
   <b>OTP Email Received</b><br>
-  <img src="screenshots/Actual_OTP_email.png" width="500"><br><br>
+  <img src="screenshots/Actual_OTP_Email.png" width="500"><br><br>
   <b>User Dashboard</b><br>
   <img src="screenshots/User_Dashboard.png" width="500"><br><br>
   <b>Administrator Login</b><br>
