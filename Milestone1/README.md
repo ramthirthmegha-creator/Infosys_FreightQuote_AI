@@ -111,45 +111,48 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
 7. In Colab Secrets, add `EMAIL_ADDRESS` (your Gmail address) and `EMAIL_PASSWORD` (the 16-character App Password, not your normal Gmail password).
 
 ## Screenshots
-
-<p align="center">
-  <b>Login</b><br>
-  <img src="screenshots/login.png" width="500"><br><br>
-  <b>Signup</b><br>
-  <img src="screenshots/signup.png" width="500"><br><br>
-  <b>Forgot Password — Security Question route</b><br>
-  <img src="screenshots/forgot_security_question.png" width="500"><br><br>
-  <b>Forgot Password — Email OTP route</b><br>
-  <img src="screenshots/forgot_otp.png" width="500"><br><br>
-  <b>OTP Email Received</b><br>
-  <img src="screenshots/otp_email.png" width="500"><br><br>
-  <b>User Dashboard</b><br>
-  <img src="screenshots/user_dashboard.png" width="500"><br><br>
-  <b>Administrator Login</b><br>
-  <img src="screenshots/admin_login.png" width="500"><br><br>
-  <b>Admin Dashboard</b><br>
-  <img src="screenshots/admin_dashboard.png" width="500">
-</p>
-
-> Rename your actual screenshot files to match the names above (or edit the paths here to match your filenames), and make sure they're all inside `Milestone1/screenshots/`.
 ## Screenshots
+
 <p align="center">
-  <b>Login</b><br>
-  <img src="screenshots/login.png" width="500"><br><br>
-  <b>Signup</b><br>
-  <img src="screenshots/signup.png" width="500"><br><br>
+
+  <b>login Page</b><br>
+  <img src="screenshots/login.png" width="500"><br>
+  <sub>The sign-in form with username/email and password fields.</sub><br><br>
+  ![Login Page](screenshots/Login_Page.png)
+  
+
+  <b>Signup Page</b><br>
+  <img src="screenshots/signup.png" width="500"><br>
+  <sub>Account creation with username, email, password, security question and answer.</sub><br><br>
+
+  <b>Signup Validation Error</b><br>
+  <img src="screenshots/signup_validation_error.png" width="500"><br>
+  <sub>Shows the email/password format error being caught in real time.</sub><br><br>
+
   <b>Forgot Password — Security Question route</b><br>
-  <img src="screenshots/forgot_security_question.png" width="500"><br><br>
+  <img src="screenshots/forgot_security_question.png" width="500"><br>
+  <sub>Recovering access by answering the saved security question.</sub><br><br>
+
   <b>Forgot Password — Email OTP route</b><br>
-  <img src="screenshots/forgot_otp.png" width="500"><br><br>
+  <img src="screenshots/forgot_otp.png" width="500"><br>
+  <sub>Recovering access by requesting a 6-digit code via email.</sub><br><br>
+
   <b>OTP Email Received</b><br>
-  <img src="screenshots/otp_email.png" width="500"><br><br>
+  <img src="screenshots/otp_email.png" width="500"><br>
+  <sub>The verification email received in Gmail, containing the time-limited code.</sub><br><br>
+
   <b>User Dashboard</b><br>
-  <img src="screenshots/user_dashboard.png" width="500"><br><br>
+  <img src="screenshots/user_dashboard.png" width="500"><br>
+  <sub>The logged-in member view with a welcome message and logout option.</sub><br><br>
+
   <b>Administrator Login</b><br>
-  <img src="screenshots/admin_login.png" width="500"><br><br>
+  <img src="screenshots/admin_login.png" width="500"><br>
+  <sub>The separate admin sign-in panel on the Login page.</sub><br><br>
+
   <b>Admin Dashboard</b><br>
-  <img src="screenshots/admin_dashboard.png" width="500">
+  <img src="screenshots/admin_dashboard.png" width="500"><br>
+  <sub>The admin view listing every registered user's username and email.</sub>
+
 </p>
 
 ### Login Page
