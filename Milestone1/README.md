@@ -117,22 +117,48 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
   <img src="screenshots/Login_page.png" width="500"><br><br>
   This is the main entry point of the app, asking for a username or email along with a password. If the credentials don't match, only a single generic error is shown, never revealing whether the username or the password was the wrong part. On success, a signed JWT session token is issued and the user is taken to their Dashboard.
   
+  
   <b>Signup page</b><br>
   <img src="screenshots/Signup_page.png" width="500"><br><br>
+  New users create an account here by providing an email, a password (validated for strength), and a security question with a saved answer for future recovery. Username is optional — if left blank, it's automatically derived from the email address. The email and password are both validated in real time before the account is created.
+
+  
   <b>Signup Validation Error</b><br>
   <img src="screenshots/Signup_validation_error.png" width="500"><br><br>
+  This shows the form actively rejecting bad input — either a malformed email (not matching the ab@cd.ef pattern) or a weak password missing an uppercase letter, number, or special character. It demonstrates that no account can be created until every field meets the required format. This protects the database from incomplete or insecure entries from the very first step.
+
+  
   <b>Forgot password</b><br>
   <img src="screenshots/Forgot_password.png" width="500"><br><br>
+ This feature lets a user regain access to their account without needing to remember their current password, through two independent recovery paths available on the same page. The first option verifies identity using a security question the user set during signup, while the second sends a time-limited one-time code to their registered email. Both routes ultimately converge on the same step — setting a brand-new password — which is validated for strength and checked to ensure it isn't identical to the user's previous password. This dual-route design gives users a backup recovery method in case they've forgotten their security answer or don't have access to the same device, while keeping every step secured with hashing and short-lived tokens rather than plain-text comparisons.
+
+  
   <b>Forgot Password — Security Question route</b><br>
   <img src="screenshots/Forgot_password-Security_Question_route.png" width="500"><br><br>
+  This route lets a user recover their account by answering the same security question they set during signup. The system checks the answer against a securely hashed version stored in the database, never comparing it in plain text. Once verified, the user is allowed to set a brand-new password, with checks in place to stop them from reusing their old one.
+
+  
   <b>Forgot Password — Email OTP route</b><br>
   <img src="screenshots/Forgot_password-email_route.png" width="500"><br><br>
+  This is the second recovery path: instead of a security question, a 6-digit one-time code is emailed to the user's registered address. The code expires after 5 minutes and is never stored directly in the database — only a hashed version is embedded inside a short-lived token. Once the code is verified, the user can proceed to set a new password.
+
+  
   <b>Actual OTP</b><br>
   <img src="screenshots/Actual_OTP_email.png" width="500"><br><br>
+  This is the actual email delivered to the user's Gmail inbox, sent through Gmail's SMTP server using an App Password rather than the account's real password. It clearly displays the 6-digit verification code, states its expiry time, and includes a disclaimer in case the user didn't request it. This confirms the email delivery pipeline is fully functional end-to-end.
+
+  
   <b>User Dashboard</b><br>
   <img src="screenshots/User_Dashboard.png" width="500"><br><br>
+  Once logged in, a regular user lands here and sees a personalized welcome message along with their session details. This page is only rendered if a valid, unexpired JWT token is present — proving the session-based access control is working correctly. A Logout option is available to immediately clear the session and return to the Login page.
+
+  
   <b>Administrator Login</b><br>
   <img src="screenshots/Administrator_Login.png" width="500"><br><br>
+  This is a separate login panel, completely independent of the regular signup/login system — the admin's credentials are defined in code or Colab Secrets, not stored as a database record. This satisfies the requirement that admin access must not be tied to a signup account. Entering the wrong admin credentials here shows an error without affecting the regular user login flow at all.
+
+  
   <b>Admin Dashboard</b><br>
   <img src="screenshots/Admin_Dashboard.png" width="500">
+  After logging in as an administrator, this page displays a table of every registered user's username and email address. Passwords are intentionally excluded from this view entirely, even in hashed form, to keep the admin's visibility limited to non-sensitive account data. This gives the administrator basic oversight of all registered accounts without compromising user security.
 </p>
