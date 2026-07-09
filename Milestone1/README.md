@@ -115,6 +115,8 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
 <p align="center">
   <b>Login page</b><br>
   <img src="screenshots/Login_page.png" width="500"><br><br>
+  This is the main entry point of the app, asking for a username or email along with a password. If the credentials don't match, only a single generic error is shown, never revealing whether the username or the password was the wrong part. On success, a signed JWT session token is issued and the user is taken to their Dashboard.
+  
   <b>Signup page</b><br>
   <img src="screenshots/Signup_page.png" width="500"><br><br>
   <b>Signup Validation Error</b><br>
