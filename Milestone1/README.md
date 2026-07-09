@@ -112,63 +112,34 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
 
 ## Screenshots
 
-### Login Page
+### login Page
 ![login Page](screenshots/login_Page.png)
-
-the sign-in form with username/email and password fields.
-
 
 ### Signup Page
 ![Signup Page](screenshots/Signup_page.png)
 
-account creation with username, email, password, security question and answer.
-
-
 ### Signup Validation Error
 ![Signup Validation Error](screenshots/Signup_validation_error.png)
-
-shows the email/password format error being caught in real time.
-
 
 ### Forgot Password
 ![Forgot Password](screenshots/Forgot_password.png)
 
-lets a user regain access to their account without knowing their current password, by verifying their identity through either a saved security question or a one-time code emailed to their registered address, before letting them set a new password.
-
-
-### Forgot Password - Security Question route
+### Forgot Password - Security Question
 ![Forgot Password - Security Question](screenshots/Forgot_password-Security_Question_route.png)
 
-recovering access by answering the saved security question.
-
-
-### Forgot Password - Email OTP route
+### Forgot Password - Email OTP
 ![Forgot Password - Email OTP](screenshots/Forgot_password-email_OTP_route.png)
 
-recovering access by requesting a 6-digit code via email.
-
-
 ### OTP Email
-![OTP Email](screenshots/Actual_OTP_email.png)
-
-the verification email received in Gmail, containing the time-limited code.
-
+![OTP Email](screenshots/The_actual_OTP_email.png)
 
 ### User Dashboard
 ![User Dashboard](screenshots/User_Dashboard.png)
 
-the logged-in member view with a welcome message and logout option.
-
-
 ### Administrator Login
 ![Administrator Login](screenshots/Administrator_Login.png)
 
-the separate admin sign-in panel on the Login page.
-
-
 ### Admin Dashboard
 ![Admin Dashboard](screenshots/Admin_Dashboard.png)
-
-the admin view listing every registered user's username and email.
 
 
