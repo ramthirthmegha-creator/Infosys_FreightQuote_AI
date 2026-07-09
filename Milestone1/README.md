@@ -112,34 +112,25 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
 
 ## Screenshots
 
-### Login Page
-![Login Page](Milestone1/screenshots/Login_page.png)
-
-### Signup Page
-![Signup Page](screenshots/Signup_page.png)
-
-### Signup Validation Error
-![Signup Validation Error](screenshots/Signup_validation_error.png)
-
-### Forgot Password
-![Forgot Password](screenshots/Forgot_password.png)
-
-### Forgot Password - Security Question
-![Forgot Password - Security Question](screenshots/Forgot_password-Security_Question_route.png)
-
-### Forgot Password - Email OTP
-![Forgot Password - Email OTP](screenshots/Forgot_password-email_OTP_route.png)
-
-### OTP Email
-![OTP Email](screenshots/The_actual_OTP_email.png)
-
-### User Dashboard
-![User Dashboard](screenshots/User_Dashboard.png)
-
-### Administrator Login
-![Administrator Login](screenshots/Administrator_Login.png)
-
-### Admin Dashboard
-![Admin Dashboard](screenshots/Admin_Dashboard.png)
-
-
+<p align="center">
+  <b>Login page</b><br>
+  <img src="screenshots/Login_page.png" width="500"><br><br>
+  <b>Signup page</b><br>
+  <img src="screenshots/Signup_page.png" width="500"><br><br>
+  <b>Signup Validation Error</b><br>
+  <img src="screenshots/Signup_validation_error.png" width="500"><br><br>
+  <b>Forgot password</b><br>
+  <img src="screenshots/Forgot_password.png" width="500"><br><br>
+  <b>Forgot Password — Security Question route</b><br>
+  <img src="screenshots/Forgot_password-security_question_route.png" width="500"><br><br>
+  <b>Forgot Password — Email OTP route</b><br>
+  <img src="screenshots/Forgot_password-email_OTP_route.png" width="500"><br><br>
+  <b>OTP Email Received</b><br>
+  <img src="screenshots/Actual_OTP_email.png" width="500"><br><br>
+  <b>User Dashboard</b><br>
+  <img src="screenshots/User_dashboard.png" width="500"><br><br>
+  <b>Administrator Login</b><br>
+  <img src="screenshots/Administrator_login.png" width="500"><br><br>
+  <b>Admin Dashboard</b><br>
+  <img src="screenshots/Admin_dashboard.png" width="500">
+</p>
