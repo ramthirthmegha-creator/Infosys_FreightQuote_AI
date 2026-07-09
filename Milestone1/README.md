@@ -122,7 +122,7 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
   <b>Forgot password</b><br>
   <img src="screenshots/Forgot_password.png" width="500"><br><br>
   <b>Forgot Password — Security Question route</b><br>
-  <img src="screenshots/Forgot_password-security_question_route.png" width="500"><br><br>
+  <img src="screenshots/Forgot_password-Security_Question_route.png" width="500"><br><br>
   <b>Forgot Password — Email OTP route</b><br>
   <img src="screenshots/Forgot_password-email_OTP_route.png" width="500"><br><br>
   <b>OTP Email Received</b><br>
