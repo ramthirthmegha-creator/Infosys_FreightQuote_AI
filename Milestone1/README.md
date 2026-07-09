@@ -113,7 +113,7 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
 ## Screenshots
 
 ### Login Page
-![Login Page](screenshots/Login_Page.png)
+![Login Page](screenshots/Login_Page.png)(Milestone1/screenshots/Login_page.png)
 
 ### Signup Page
 ![Signup Page](screenshots/Signup_page.png)
