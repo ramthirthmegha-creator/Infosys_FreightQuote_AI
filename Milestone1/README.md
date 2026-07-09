@@ -112,8 +112,8 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
 
 ## Screenshots
 
-### login Page
-![login Page](screenshots/login_Page.png)
+### Login Page
+![Login Page](screenshots/Login_Page.png)
 
 ### Signup Page
 ![Signup Page](screenshots/Signup_page.png)
