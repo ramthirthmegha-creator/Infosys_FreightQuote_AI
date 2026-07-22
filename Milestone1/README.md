@@ -155,5 +155,6 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
   
   <b>Admin Dashboard</b><br>
   <img src="screenshots/Admin_Dashboard.png" width="500">
+ 
   After logging in as an administrator, this page displays a table of every registered user's username and email address. Passwords are intentionally excluded from this view entirely, even in hashed form, to keep the admin's visibility limited to non-sensitive account data. This gives the administrator basic oversight of all registered accounts without compromising user security.
 </p>
