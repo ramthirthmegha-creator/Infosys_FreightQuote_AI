@@ -153,11 +153,6 @@ as a background Streamlit process, tunnelled to the public internet by ngrok.
   Once logged in, a regular user lands here and sees a personalized welcome message along with their session details. This page is only rendered if a valid, unexpired JWT token is present — proving the session-based access control is working correctly. A Logout option is available to immediately clear the session and return to the Login page.
 
   
-  <b>Administrator Login</b><br>
-  <img src="screenshots/Administrator_Login.png" width="500"><br><br>
-  This is a separate login panel, completely independent of the regular signup/login system — the admin's credentials are defined in code or Colab Secrets, not stored as a database record. This satisfies the requirement that admin access must not be tied to a signup account. Entering the wrong admin credentials here shows an error without affecting the regular user login flow at all.
-
-  
   <b>Admin Dashboard</b><br>
   <img src="screenshots/Admin_Dashboard.png" width="500">
   After logging in as an administrator, this page displays a table of every registered user's username and email address. Passwords are intentionally excluded from this view entirely, even in hashed form, to keep the admin's visibility limited to non-sensitive account data. This gives the administrator basic oversight of all registered accounts without compromising user security.
